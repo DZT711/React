@@ -9,11 +9,6 @@ function MyBtn(){
     );
 
 }
-function MyBtn2({ count, onClick }) {
-    return (
-        <button onClick={onClick}>Clicked {count} times</button>
-    );
-}
 export default function Counter() {
     const [count, setCount] = useState(0);
     function handleClick() {
