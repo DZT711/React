@@ -5,11 +5,14 @@ import App from './App.jsx'
 import Profile from './Profile.jsx'
 import ShoppingList from './ShoppingList.jsx'
 import Counter from './Counter.jsx'
+import Caro from './Caro.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
     <Profile />
     <ShoppingList />
     <Counter />
+    <h1>Tic Tac Toe</h1>
+    <Caro />
   </StrictMode>,
 )
