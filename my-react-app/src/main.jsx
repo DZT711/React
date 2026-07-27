@@ -9,6 +9,7 @@ import Caro from './Caro.jsx'
 import CaroWithBot from './CaroWithBot.jsx'
 import Todos from './Todos.jsx'
 import RenderList from './RenderList.jsx'
+import GoodJob from './GoodJob.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
@@ -26,5 +27,7 @@ createRoot(document.getElementById('root')).render(
     <Todos />
     <h1>Football Players List</h1>
     <RenderList />
+    {/* <h1>Good Job Component</h1> */}
+    <GoodJob />
   </StrictMode>,
 )
