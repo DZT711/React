@@ -50,57 +50,63 @@ function getRandomMove(squares) {
 
 // Minimax algorithm for hard AI
 function minimax(squares, depth, isMaximizing) {
-  const winner = calculateWinner(squares);
-  
-  // Terminal states
-  if (winner === 'O') return 10 - depth; // Bot wins (higher score for faster wins)
-  if (winner === 'X') return depth - 10; // Player wins (lower score)
-  if (isBoardFull(squares)) return 0; // Draw
-  
+  const winner = calculateWinner(squares); // Evaluate if this board is already a terminal win state.
+
+  if (winner === 'O') return 10 - depth; // Bot (O) has won; return positive score, faster wins get higher score.
+  if (winner === 'X') return depth - 10; // Player (X) has won; return negative score, faster losses are worse.
+  if (isBoardFull(squares)) return 0; // No winner and board full means a draw.
+
   if (isMaximizing) {
-    // Bot's turn - maximize score
-    let maxScore = -Infinity;
+    // Bot's turn: it tries to maximize the score.
+    let maxScore = -Infinity; // Start lower than any possible score.
+
     for (let i = 0; i < 9; i++) {
       if (squares[i] === null) {
-        const newSquares = [...squares];
-        newSquares[i] = 'O';
-        const score = minimax(newSquares, depth + 1, false);
-        maxScore = Math.max(score, maxScore);
+        const newSquares = [...squares]; // Copy the current board before simulating the move.
+        newSquares[i] = 'O'; // Place the bot's mark on the empty square.
+        const score = minimax(newSquares, depth + 1, false); // Recurse to evaluate the opponent's response.
+        maxScore = Math.max(score, maxScore); // Keep the best score from all possible moves.
       }
     }
-    return maxScore;
+
+    return maxScore; // Return the highest score the bot can force from this position.
   } else {
-    // Player's turn - minimize score
-    let minScore = Infinity;
+    // Player's turn: the player is assumed to play optimally and minimize the bot's score.
+    let minScore = Infinity; // Start higher than any possible score.
+
     for (let i = 0; i < 9; i++) {
       if (squares[i] === null) {
-        const newSquares = [...squares];
-        newSquares[i] = 'X';
-        const score = minimax(newSquares, depth + 1, true);
-        minScore = Math.min(score, minScore);
+        const newSquares = [...squares]; // Copy board for this simulated opponent move.
+        newSquares[i] = 'X'; // Place the player's mark on the empty square.
+        const score = minimax(newSquares, depth + 1, true); // Recurse with the bot's next turn.
+        minScore = Math.min(score, minScore); // Pick the move that gives the smallest score to the bot.
       }
     }
-    return minScore;
+
+    return minScore; // Return the worst-case score from the bot's perspective.
   }
 }
 
-// Hard AI - uses minimax algorithm
+// Hard AI - uses minimax algorithm to choose the best move
 function getBotMove(squares) {
-  let bestScore = -Infinity;
-  let bestMove = 0;
-  
+  let bestScore = -Infinity; // Best score found so far.
+  let bestMove = 0; // Index of the best move.
+
   for (let i = 0; i < 9; i++) {
     if (squares[i] === null) {
-      const newSquares = [...squares];
-      newSquares[i] = 'O';
-      const score = minimax(newSquares, 0, false);
+      const newSquares = [...squares]; // Copy the current board.
+      newSquares[i] = 'O'; // Simulate the bot making a move here.
+      const score = minimax(newSquares, 0, false); // Evaluate the resulting board with minimax.
+
       if (score > bestScore) {
+        // If this move gives a higher score than any previous move, remember it.
         bestScore = score;
         bestMove = i;
       }
     }
   }
-  return bestMove;
+
+  return bestMove; // Return the index of the optimal move.
 }
 
 // Main game component
