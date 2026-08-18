@@ -10,6 +10,8 @@ import CaroWithBot from './CaroWithBot.jsx'
 import Todos from './Todos.jsx'
 import RenderList from './RenderList.jsx'
 import GoodJob from './GoodJob.jsx'
+import CurlyBraces from './CurlyBraces.jsx'
+import GetDate from './GetDate.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
@@ -29,5 +31,9 @@ createRoot(document.getElementById('root')).render(
     <RenderList />
     {/* <h1>Good Job Component</h1> */}
     <GoodJob />
+    <h1>Curly Braces Component</h1>
+    <CurlyBraces />
+    <h1>Get Date Component</h1>
+    <GetDate />
   </StrictMode>,
 )
