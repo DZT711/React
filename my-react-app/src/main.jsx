@@ -12,6 +12,8 @@ import RenderList from './RenderList.jsx'
 import GoodJob from './GoodJob.jsx'
 import CurlyBraces from './CurlyBraces.jsx'
 import GetDate from './GetDate.jsx'
+import CSSList from './CSSList.jsx'
+import CSSPortfolio from './CSSPortfolio.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
@@ -35,5 +37,8 @@ createRoot(document.getElementById('root')).render(
     <CurlyBraces />
     <h1>Get Date Component</h1>
     <GetDate />
+    <CSSList />
+    <h1>Css Styling In Json</h1>
+    <CSSPortfolio />
   </StrictMode>,
 )
