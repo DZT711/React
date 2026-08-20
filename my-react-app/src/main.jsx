@@ -14,6 +14,9 @@ import CurlyBraces from './CurlyBraces.jsx'
 import GetDate from './GetDate.jsx'
 import CSSList from './CSSList.jsx'
 import CSSPortfolio from './CSSPortfolio.jsx'
+import PropInComponent from './PropInComponent.jsx'
+import ColorAndTime from './ColorAndTime.jsx'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
@@ -40,5 +43,8 @@ createRoot(document.getElementById('root')).render(
     <CSSList />
     <h1>Css Styling In Json</h1>
     <CSSPortfolio />
+    <PropInComponent />
+    <h1 >Props Changing</h1>
+    <ColorAndTime />
   </StrictMode>,
 )
