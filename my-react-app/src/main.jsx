@@ -9,6 +9,7 @@ import Caro from './Caro.jsx'
 import CaroWithBot from './CaroWithBot.jsx'
 import Todos from './Todos.jsx'
 import RenderList from './RenderList.jsx'
+import RenderingList from './RenderingList.jsx'
 import GoodJob from './GoodJob.jsx'
 import CurlyBraces from './CurlyBraces.jsx'
 import GetDate from './GetDate.jsx'
@@ -16,6 +17,7 @@ import CSSList from './CSSList.jsx'
 import CSSPortfolio from './CSSPortfolio.jsx'
 import PropInComponent from './PropInComponent.jsx'
 import ColorAndTime from './ColorAndTime.jsx'
+import ConditionalRendering from './ConditionalRendering.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -46,5 +48,9 @@ createRoot(document.getElementById('root')).render(
     <PropInComponent />
     <h1 >Props Changing</h1>
     <ColorAndTime />
+    {/* <h1>Conditional Rendering</h1> */}
+    <ConditionalRendering />
+    <h1>Rendering List</h1>
+    <RenderingList />
   </StrictMode>,
 )
