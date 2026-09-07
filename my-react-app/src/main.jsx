@@ -18,6 +18,7 @@ import CSSPortfolio from './CSSPortfolio.jsx'
 import PropInComponent from './PropInComponent.jsx'
 import ColorAndTime from './ColorAndTime.jsx'
 import ConditionalRendering from './ConditionalRendering.jsx'
+import Interactivities from './Interactivities.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -52,5 +53,6 @@ createRoot(document.getElementById('root')).render(
     <ConditionalRendering />
     <h1>Rendering List</h1>
     <RenderingList />
+    <Interactivities />
   </StrictMode>,
 )
