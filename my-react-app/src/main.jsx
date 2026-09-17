@@ -19,6 +19,7 @@ import PropInComponent from './PropInComponent.jsx'
 import ColorAndTime from './ColorAndTime.jsx'
 import ConditionalRendering from './ConditionalRendering.jsx'
 import Interactivities from './Interactivities.jsx'
+import UpdatingObjects from './UpdatingObjects.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -54,5 +55,6 @@ createRoot(document.getElementById('root')).render(
     <h1>Rendering List</h1>
     <RenderingList />
     <Interactivities />
+    <UpdatingObjects />
   </StrictMode>,
 )
