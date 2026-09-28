@@ -20,6 +20,7 @@ import ColorAndTime from './ColorAndTime.jsx'
 import ConditionalRendering from './ConditionalRendering.jsx'
 import Interactivities from './Interactivities.jsx'
 import UpdatingObjects from './UpdatingObjects.jsx'
+import ClickMe from './ClickMe.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -56,5 +57,6 @@ createRoot(document.getElementById('root')).render(
     <RenderingList />
     <Interactivities />
     <UpdatingObjects />
+    <ClickMe />
   </StrictMode>,
 )
