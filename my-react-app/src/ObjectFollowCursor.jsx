@@ -77,57 +77,103 @@ setSnowflakes((prev) =>
     return () => clearInterval(interval);
   }, []);
 
+
+    const [person, setPerson] = useState({
+        firstName:'Nguyen',
+        lastName:'Huy',
+        email:'nguyensihuynsh711@gmail.com'
+    });
+    function handleFirstNameChange(e) {
+        setPerson({
+            ...person,
+            firstName:e.target.value
+        })
+    }
+    function handleLastNameChange(e) {
+        setPerson({
+            ...person,
+            lastName:e.target.value
+        })
+    }
+    function handleEmailChange(e) {
+        setPerson({
+            ...person,
+            email:e.target.value
+        })
+    }
   return (
-    <div
-      className="winter-container"
-      onPointerMove={handlePointerMove}
-    >
-      {/* Toggle button */}
-      <button
-        className="snow-toggle"
-        onClick={() => {
-          setEnabled(!enabled);
-          setSnowflakes([]);
-        }}
-      >
-        {enabled ? "❄ Snow Effect: ON" : "❄ Snow Effect: OFF"}
-      </button>
-
-      <div className="winter-content">
-        <h1>❄ Winter Wonderland ❄</h1>
-        <p>Move your cursor to create magical snowfall</p>
-      </div>
-
-      {/* Main cursor snowflake */}
-      {enabled && (
+    <div>
+            
+        <h1>Snowflakes Cursor</h1>
         <div
-          className="cursor-snowflake"
-          style={{
-            left: position.x,
-            top: position.y,
-          }}
-        >
-          ❄
-        </div>
-      )}
-
-      {/* Falling snowflakes */}
-      {enabled &&
-        snowflakes.map((flake) => (
-          <span
-            key={flake.id}
-            className="falling-snowflake"
-            style={{
-              left: flake.x,
-              top: flake.y,
-              fontSize: flake.size,
-              "--duration": `${flake.duration}s`,
-              "--drift": `${flake.drift}px`,
-            }}
+        className="winter-container"
+        onPointerMove={handlePointerMove}
           >
+        {/* Toggle button */}
+        <button
+            className="snow-toggle"
+            onClick={() => {
+                setEnabled(!enabled);
+                setSnowflakes([]);
+            }}
+            >
+            {enabled ? "❄ Snow Effect: ON" : "❄ Snow Effect: OFF"}
+        </button>
+
+        <div className="winter-content">
+            <h1>❄ Winter Wonderland ❄</h1>
+            <p>Move your cursor to create magical snowfall</p>
+        </div>
+
+        {/* Main cursor snowflake */}
+        {enabled && (
+            <div
+            className="cursor-snowflake"
+            style={{
+                left: position.x,
+                top: position.y,
+                }}
+                >
             ❄
-          </span>
-        ))}
+            </div>
+        )}
+
+        {/* Falling snowflakes */}
+        {enabled &&
+            snowflakes.map((flake) => (
+                <span
+                key={flake.id}
+                className="falling-snowflake"
+                style={{
+                    left: flake.x,
+                    top: flake.y,
+                    fontSize: flake.size,
+                    "--duration": `${flake.duration}s`,
+                    "--drift": `${flake.drift}px`,
+                }}
+                >
+                ❄
+            </span>
+            ))}
+          </div>
+          <div>
+              <h1>Show Obj In Form</h1>
+              <label>First name:
+                  <input value={person.firstName} onChange={handleFirstNameChange} />
+              </label>
+              <br/>
+              <label>Last name:
+                  <input value={person.lastName} onChange={handleLastNameChange} />
+              </label>
+              <br/>
+              <label>Email:
+                  <input value={person.email} onChange={handleEmailChange} />
+              </label>
+              <br/>
+              <p>
+                  Hello {person.firstName} {''} {person.lastName} {' '}({person.email})
+            </p>
+          </div>
     </div>
   );
 }
