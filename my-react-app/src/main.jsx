@@ -22,6 +22,7 @@ import Interactivities from './Interactivities.jsx'
 import UpdatingObjects from './UpdatingObjects.jsx'
 import ClickMe from './ClickMe.jsx'
 import ObjectFollowCursor from './ObjectFollowCursor.jsx'
+import UpdateArr from './UpdateArr.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -62,5 +63,6 @@ createRoot(document.getElementById('root')).render(
     
     <ClickMe />
     <ObjectFollowCursor />
+    <UpdateArr/>
   </StrictMode>,
 )
