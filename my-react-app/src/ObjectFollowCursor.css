@@ -1,0 +1,147 @@
+/* Main container */
+.winter-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #07172e,
+    #123761,
+    #1b5275
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Winter text */
+.winter-content {
+  text-align: center;
+  pointer-events: none;
+}
+
+.winter-content h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 15px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #a6e7ff,
+    #ffffff
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.winter-content p {
+  color: #b8d9f0;
+  font-size: 1.1rem;
+}
+
+/* Toggle button */
+.snow-toggle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 100;
+
+  padding: 12px 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.snow-toggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+
+  box-shadow: 0 0 20px rgba(150, 220, 255, 0.4);
+}
+
+/* Main cursor snowflake */
+.cursor-snowflake {
+  position: fixed;
+  z-index: 9999;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 34px;
+  color: #ffffff;
+
+  pointer-events: none;
+
+  filter: drop-shadow(0 0 8px #a6e7ff)
+          drop-shadow(0 0 15px #65cfff);
+
+  animation: cursorRotate 8s linear infinite;
+}
+
+/* Falling snowflakes */
+.falling-snowflake {
+  position: fixed;
+  z-index: 9998;
+
+  color: #e4f7ff;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  filter: drop-shadow(0 0 5px #b5eaff);
+
+  animation: snowFall var(--duration) ease-out forwards;
+}
+
+/* Cursor rotation */
+@keyframes cursorRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Falling animation */
+@keyframes snowFall {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform:
+      translate(var(--drift), 150px)
+      rotate(360deg)
+      scale(0.3);
+
+    opacity: 0;
+  }
+}

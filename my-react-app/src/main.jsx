@@ -21,6 +21,7 @@ import ConditionalRendering from './ConditionalRendering.jsx'
 import Interactivities from './Interactivities.jsx'
 import UpdatingObjects from './UpdatingObjects.jsx'
 import ClickMe from './ClickMe.jsx'
+import ObjectFollowCursor from './ObjectFollowCursor.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -57,6 +58,9 @@ createRoot(document.getElementById('root')).render(
     <RenderingList />
     <Interactivities />
     <UpdatingObjects />
+    <h1>Object Following Cursor</h1>
+    
     <ClickMe />
+    <ObjectFollowCursor />
   </StrictMode>,
 )
