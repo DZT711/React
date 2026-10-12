@@ -24,6 +24,7 @@ import ClickMe from './ClickMe.jsx'
 import ObjectFollowCursor from './ObjectFollowCursor.jsx'
 import UpdateArr from './UpdateArr.jsx'
 import FastQuiz from './FastQuiz.jsx'
+import CRUDList from './CRUDList.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -67,5 +68,6 @@ createRoot(document.getElementById('root')).render(
     <UpdateArr />
     <h1>Reacting to input with state</h1>
     <FastQuiz />
+    <CRUDList />
   </StrictMode>
 );
