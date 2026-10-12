@@ -23,6 +23,7 @@ import UpdatingObjects from './UpdatingObjects.jsx'
 import ClickMe from './ClickMe.jsx'
 import ObjectFollowCursor from './ObjectFollowCursor.jsx'
 import UpdateArr from './UpdateArr.jsx'
+import FastQuiz from './FastQuiz.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -63,6 +64,8 @@ createRoot(document.getElementById('root')).render(
     
     <ClickMe />
     <ObjectFollowCursor />
-    <UpdateArr/>
-  </StrictMode>,
-)
+    <UpdateArr />
+    <h1>Reacting to input with state</h1>
+    <FastQuiz />
+  </StrictMode>
+);
