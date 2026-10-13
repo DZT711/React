@@ -29,6 +29,7 @@ import ChooseElement from './ChooseElement.jsx'
 import NestedCity from './NestedCity.jsx'
 import VideoPlayer from './VideoPlayer.jsx'
 import Stopwatch  from './Stopwatch.jsx'
+import Dogs  from './Dogs.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -81,6 +82,7 @@ createRoot(document.getElementById('root')).render(
     <VideoPlayer />
     <h1>Building A Stopwatch</h1>
     <Stopwatch  />
-
+    <h1>Scrolling to an element </h1>
+    <Dogs  />
   </StrictMode>
 );
