@@ -28,6 +28,7 @@ import CRUDList from './CRUDList.jsx'
 import ChooseElement from './ChooseElement.jsx'
 import NestedCity from './NestedCity.jsx'
 import VideoPlayer from './VideoPlayer.jsx'
+import Stopwatch  from './Stopwatch.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -78,6 +79,8 @@ createRoot(document.getElementById('root')).render(
     <NestedCity />
     <h1>Synchronizing with Effects </h1>
     <VideoPlayer />
+    <h1>Building A Stopwatch</h1>
+    <Stopwatch  />
 
   </StrictMode>
 );
