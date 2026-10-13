@@ -27,6 +27,7 @@ import FastQuiz from './FastQuiz.jsx'
 import CRUDList from './CRUDList.jsx'
 import ChooseElement from './ChooseElement.jsx'
 import NestedCity from './NestedCity.jsx'
+import VideoPlayer from './VideoPlayer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -75,6 +76,8 @@ createRoot(document.getElementById('root')).render(
     <ChooseElement />
     <h1>Avoid deeply nested state </h1>
     <NestedCity />
+    <h1>Synchronizing with Effects </h1>
+    <VideoPlayer />
 
   </StrictMode>
 );
