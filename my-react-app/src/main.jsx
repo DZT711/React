@@ -25,6 +25,7 @@ import ObjectFollowCursor from './ObjectFollowCursor.jsx'
 import UpdateArr from './UpdateArr.jsx'
 import FastQuiz from './FastQuiz.jsx'
 import CRUDList from './CRUDList.jsx'
+import ChooseElement from './ChooseElement.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -69,5 +70,7 @@ createRoot(document.getElementById('root')).render(
     <h1>Reacting to input with state</h1>
     <FastQuiz />
     <CRUDList />
+    <h1>Avoid duplication in state </h1>
+    <ChooseElement />
   </StrictMode>
 );
