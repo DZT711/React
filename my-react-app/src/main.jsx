@@ -26,6 +26,7 @@ import UpdateArr from './UpdateArr.jsx'
 import FastQuiz from './FastQuiz.jsx'
 import CRUDList from './CRUDList.jsx'
 import ChooseElement from './ChooseElement.jsx'
+import NestedCity from './NestedCity.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -72,5 +73,8 @@ createRoot(document.getElementById('root')).render(
     <CRUDList />
     <h1>Avoid duplication in state </h1>
     <ChooseElement />
+    <h1>Avoid deeply nested state </h1>
+    <NestedCity />
+
   </StrictMode>
 );
